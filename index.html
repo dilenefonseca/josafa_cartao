@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Josafá Almeida Araújo</title>
+  </head>
+  <body onload="shouldRedirect();">
+    <div>
+        <embed src="josafa.pdf" width="800px" height="2100px" />
+  </body>
+  <script>
+    function isMobile() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+        // Windows Phone must come first because its UA also contains "Android"
+        if ((/windows phone/i.test(userAgent)) || (/android/i.test(userAgent)) || (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)){
+            return true
+        }
+    
+        return false;
+    }
+    function shouldRedirect(){
+      
+      if(isMobile()){
+          window.location.replace("https://drive.google.com/file/d/1i-4LTqLNa-hOkTd3XS2_5QH3rLtOcABV/view?usp=sharing");
+      }
+    }
+  </script>
+  <style>
+    #yourcontainer {
+      height: 98vh;
+      width: 100vh;
+    }
+  </style>
+</html>
